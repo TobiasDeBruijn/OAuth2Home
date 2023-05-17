@@ -1,0 +1,17 @@
+[package]
+name = "oauth2home"
+version = "0.1.0"
+edition = "2021"
+authors = ["Tobias de Bruijn <t.debruijn@array21.dev>"]
+
+[dependencies]
+sqlx = { version = "0.6.3", features = ["runtime-tokio-rustls", "sqlite", "migrate"]}
+actix-web = { version = "4.3.1", default-features = false }
+serde = { version = "1.0.162", features = ["derive"]}
+tracing = "0.1.37"
+tokio = { version = "1.28.1", features = ["sync"]}
+actix-route-config = "0.1.1"
+thiserror = "1.0.40"
+rand = "0.8.5"
+time = "0.3.21"
+serde_qs = "0.12.0"
